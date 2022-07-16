@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script>
+            const fetchDate = async () => {
+                const data = await fetch("/hello");
+                console.log(data);
+                document.write(data);
+            }
+            fetchDate();
+        </script>
+    </body>
+</html>
