@@ -5,6 +5,7 @@ const request = supertest(app);
 it('hello', async () => {
     const data = await request.get('/hello');
     //expect(data.text).toBe('Hello World');
+    expect(1).toBe(1);
 });
 
 /*
