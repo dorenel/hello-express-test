@@ -1,0 +1,22 @@
+this project demonstrates connecting github actions with deployment
+on aws. it deploys a simple http_server (which only returns "hello world")
+to the aws and run a simple test automatically.
+
+to see github actions:
+    edit .github/workflows/npm-test.yml
+    push the change to github
+    see the automated steps under the "actions" tab
+
+on aws:
+    create a bucket
+    make sure the bucket's permission -> object ownership -> ACLs enabled is checked
+    make sure static web hosting is on if it's a static page
+    generate secret aws keys:
+        <your account> -> security credentials -> access keys
+        create new access key and download them
+
+on github:
+    set the secret keys in the repository level instead of environment level
+    <your repo> -> settings -> secrets -> actions -> new repository secrets
+    add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with the keys from aws
+    change the AWS_S3_BUCKET in main.yml to your s3 bucket name (just the name without arn:*)
