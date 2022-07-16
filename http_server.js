@@ -6,9 +6,9 @@ app.get('/hello', (req, res) => {
 });
 
 //comment this out for jest testing
-app.listen(3000, () => {
-    console.log("Listening on port 3000...");
-});
+//app.listen(3000, () => {
+//    console.log("Listening on port 3000...");
+//});
 
 
 module.exports = app;
