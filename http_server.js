@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/hello', (req, res) => {
-    res.send("Different response to make the test fail.");
+    res.send("Hello World");
 });
 
 /* comment this out for jest testing
